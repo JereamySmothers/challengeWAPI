@@ -16,9 +16,12 @@ var highscore = document.querySelector(highscore-btn);
 function quizJS() {
 
     // local variables
+
         // Function for countdown
         var countdown = function timer(event) {
             console.log(countdown);
+
+
         };
 
         // Function for timer during quiz; synced to scoring(move outside function?w/eventListener)
@@ -28,37 +31,131 @@ function quizJS() {
             // function accessing high scores (move to score function, wherever it is?)
             function highScores() {
                 console.log(scoreStorage);
+                
                 //access local storage and allow it to be displayed in browser
+
             };
 
             // Function for storing scores with name input available
             var scoreStorage = function storage() {
                 console.log(scoreStorage);
+
             };
         };
 
         // Function for questions to cycle
-        var questions = function cycle() {
-            console.log(questions);
+        var quiz1 = function cycle() {
+            console.log(quiz1);
 
             // Function for question 1 (entails boolean with one correct answer and score addition)
             var question1 = function question1() {
                 console.log(question1);
+
             };
 
             // Function for question 2 (give variables a value)
             var question2 = function question2() {
                 console.log(question2);
+
             };
 
             // Function for question 3
             var question3 = function question3() {
                 console.log(question3);
+
             };
 
             // Function for question 4
             var question4 = function question4() {
                 console.log(question4);
+                
+            };
+        };
+
+        // Function for questions to cycle
+        var quiz2 = function cycle() {
+            console.log(quiz2);
+
+            // Function for question 1 (entails boolean with one correct answer and score addition)
+            var question1 = function question1() {
+                console.log(question1);
+
+            };
+
+            // Function for question 2 (give variables a value)
+            var question2 = function question2() {
+                console.log(question2);
+
+            };
+
+            // Function for question 3
+            var question3 = function question3() {
+                console.log(question3);
+
+            };
+
+            // Function for question 4
+            var question4 = function question4() {
+                console.log(question4);
+                
+            };
+        };
+
+        // Function for questions to cycle
+        var quiz3 = function cycle() {
+            console.log(quiz3);
+
+            // Function for question 1 (entails boolean with one correct answer and score addition)
+            var question1 = function question1() {
+                console.log(question1);
+
+            };
+
+            // Function for question 2 (give variables a value)
+            var question2 = function question2() {
+                console.log(question2);
+
+            };
+
+            // Function for question 3
+            var question3 = function question3() {
+                console.log(question3);
+
+            };
+
+            // Function for question 4
+            var question4 = function question4() {
+                console.log(question4);
+                
+            };
+        };
+
+        // Function for questions to cycle
+        var quiz4 = function cycle() {
+            console.log(quiz4);
+
+            // Function for question 1 (entails boolean with one correct answer and score addition)
+            var question1 = function question1() {
+                console.log(question1);
+
+            };
+
+            // Function for question 2 (give variables a value)
+            var question2 = function question2() {
+                console.log(question2);
+
+            };
+
+            // Function for question 3
+            var question3 = function question3() {
+                console.log(question3);
+
+            };
+
+            // Function for question 4
+            var question4 = function question4() {
+                console.log(question4);
+                
             };
         };
 };
