@@ -14,25 +14,27 @@ var question1 = document.querySelector('#question1');
 var button1Choice1 = document.querySelector('#choice1-1');
 var button1Choice2 = document.querySelector('#choice1-2');
 var button1Choice3 = document.querySelector('#choice1-3');
+var button1Choice4 = document.querySelector('#choice1-3');
 var wrongMsg = document.querySelector('#wrong');
 var quizTimer = 120;
 var timer
 var timerEl = document.createElement('div');
 document.body.append(timerEl);
 var index = 0
+var submission = document.querySelector('#submit');
 
 var questionArray = [{
-    question:'question 1',
-    choices:['choice1', 'choice2', 'choice3', 'choice4'],
-    answer: 'choice2',
+    question:'How do you link the html to the javascript doc?',
+    choices:['id', 'src', 'class', 'link'],
+    answer: 'src',
 },{
-    question:'question 2',
-    choices:['choice1', 'choice2', 'choice3', 'choice4'],
-    answer: 'choice2',
+    question:'How do you access html elements through javascript?',
+    choices:['', 'choice2', 'choice3', 'choice4'],
+    answer: 'choice1',
 },{
     question:'question 3',
     choices:['choice1', 'choice2', 'choice3', 'choice4'],
-    answer: 'choice2',
+    answer: 'choice4',
 },{
     question:'question 4',
     choices:['choice1', 'choice2', 'choice3', 'choice4'],
@@ -40,64 +42,42 @@ var questionArray = [{
 },{
     question:'question 5',
     choices:['choice1', 'choice2', 'choice3', 'choice4'],
-    answer: 'choice2',
-}]
+    answer: 'choice4',
+}];
 
 function displayQuestion() {
     question1.textContent = questionArray[index].question;
+    question2.textContent = questionArray[index].question;
+    question3.textContent = questionArray[index].question;
+    question4.textContent = questionArray[index].question;
+    
+    question5.textContent = questionArray[index].question;
+    button1Choice1.textContent = questionArray[index].choices;
+    button1Choice2.textContent = questionArray[index].choices;
+    button1Choice3.textContent = questionArray[index].choices;
+    button1Choice4.textContent = questionArray[index].choices;
 
-}
+};
 
 function countdown() {
     timerEl.textContent = quizTimer;
     quizTimer--;
     if (quizTimer <= 0) endGame();
-}
+};
+
 // Overall function linked to html buttons for starting one of 4 quizzes
 function quiz1() {
     quizStart.classList.add('hide');
     questions.classList.remove('hide');
     displayQuestion()
-    // quiztimer function
-     timer = setInterval( countdown, 1000);
-    // local variables
-
-    // Function for questions to cycle
-    // function cycle() {
-
-    //     // Function for question 1 (entails boolean with one correct answer and score addition)
-    //     function question1() {
-
-
-    //     };
-
-    //     // Function for question 2 (give variables a value)
-    //     function question2() {
-    //         console.log(question2);
-
-    //     };
-
-    //     // Function for question 3
-    //     function question3() {
-    //         console.log(question3);
-
-    //     };
-
-    //     // Function for question 4
-    //     function question4() {
-    //         console.log(question4);
-
-    //     };
-    // };
-
-
-
+    timer = setInterval( countdown, 1000);
+  
 };
 
 
 
 // Function for timer during quiz; synced to scoring(move outside function?w/eventListener)
-function score(quizTimer) {
+function score() {
 
     // Function for storing scores with name input available;
     var highScore = localStorage.getItem('highscore');
@@ -115,9 +95,6 @@ function endgame() {
 
 function storage(event) {
     event.preventDefault();
-
-    var scoreSheet = document.createElement('ol');
-    // scoreSheet.textContent = 
 
 };
 
