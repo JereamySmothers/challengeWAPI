@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
-
-    <div>
-        <button id="js-quiz-btn" class="btn">JavaScript Quiz</button>
-    </div>
-    <br />
-
-    <div>
-        <button id="html-quiz-btn" class="btn">HTML Quiz</button>
-    </div>
-    <br />
-
-    <div>
-        <button id="css-quiz-btn" class="btn">CSS Quiz</button>
-    </div>
-    <br />
-
-    <div>
-        <button id="Random-quiz-btn" class="btn">Random Quiz</button>
-    </div>
-    <br />
 
     <div>
         <button id="highscore-btn" class="btn">Your HighScores</button>
     </div>
 
+    <section id="start">
+        Welcome to the quiz site!
+        <div>
+            <button id="js-quiz-btn" class="btn">Start Quiz</button>
+        </div>
+    </section>
+
+    <section id="questions" class="hide" >
+        <h2 id="question1"></h2>
+        <button id="choice1-1"></button>
+        <button id="choice1-2"></button>
+        <button id="choice1-3"></button>
+        <button id="choice1-4"></button>
+        <p id="wrong">Wrong</p>
+    </section>
+
+    <section id="submit" class="hide">
+        <input><button>submit</button></input>
+    </section>
+
+
+
     <script src="./assets/JS/script.js"></script>
 </body>
+
 </html>
