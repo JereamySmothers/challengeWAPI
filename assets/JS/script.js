@@ -6,166 +6,110 @@
 // like to play again function.
 
 // global variables (make an array?)
-var javaQuiz = document.querySelector(js-quiz-btn);
-var htmlQuiz = document.querySelector(html-quiz-btn);
-var cssQuiz = document.querySelector(css-quiz-btn);
-var randomQuiz = document.querySelector(random-quiz-btn);
-var highscore = document.querySelector(highscore-btn);
+var javaQuiz = document.querySelector('#js-quiz-btn');
+var htmlQuiz = document.querySelector('#html-quiz-btn');
+var cssQuiz = document.querySelector('#css-quiz-btn');
+var randomQuiz = document.querySelector('#random-quiz-btn');
+var highscore = document.querySelector('#highscore-btn');
+var countdownTimer = 3;
+var quizTimer = 120;
+
+var timerEl = document.createElement('div');
+document.body.append(timerEl);
 
 // Overall function linked to html buttons for starting one of 4 quizzes
-function quizJS() {
+function quiz1() {
 
     // local variables
 
-        // Function for countdown
-        var countdown = function timer(event) {
-            console.log(countdown);
+    // Function for questions to cycle
+    function cycle() {
+
+        // Function for question 1 (entails boolean with one correct answer and score addition)
+        function question1() {
 
 
         };
 
-        // Function for timer during quiz; synced to scoring(move outside function?w/eventListener)
-        var quizTimer = function score(event) {
-            console.log(quizTimer);
+        // Function for question 2 (give variables a value)
+        function question2() {
+            console.log(question2);
 
-            // function accessing high scores (move to score function, wherever it is?)
-            function highScores() {
-                console.log(scoreStorage);
-                
-                //access local storage and allow it to be displayed in browser
-
-            };
-
-            // Function for storing scores with name input available
-            var scoreStorage = function storage() {
-                console.log(scoreStorage);
-
-            };
         };
 
-        // Function for questions to cycle
-        var quiz1 = function cycle() {
-            console.log(quiz1);
+        // Function for question 3
+        function question3() {
+            console.log(question3);
 
-            // Function for question 1 (entails boolean with one correct answer and score addition)
-            var question1 = function question1() {
-                console.log(question1);
-
-            };
-
-            // Function for question 2 (give variables a value)
-            var question2 = function question2() {
-                console.log(question2);
-
-            };
-
-            // Function for question 3
-            var question3 = function question3() {
-                console.log(question3);
-
-            };
-
-            // Function for question 4
-            var question4 = function question4() {
-                console.log(question4);
-                
-            };
         };
 
-        // Function for questions to cycle
-        var quiz2 = function cycle() {
-            console.log(quiz2);
+        // Function for question 4
+        function question4() {
+            console.log(question4);
 
-            // Function for question 1 (entails boolean with one correct answer and score addition)
-            var question1 = function question1() {
-                console.log(question1);
-
-            };
-
-            // Function for question 2 (give variables a value)
-            var question2 = function question2() {
-                console.log(question2);
-
-            };
-
-            // Function for question 3
-            var question3 = function question3() {
-                console.log(question3);
-
-            };
-
-            // Function for question 4
-            var question4 = function question4() {
-                console.log(question4);
-                
-            };
         };
+    };
 
-        // Function for questions to cycle
-        var quiz3 = function cycle() {
-            console.log(quiz3);
 
-            // Function for question 1 (entails boolean with one correct answer and score addition)
-            var question1 = function question1() {
-                console.log(question1);
 
-            };
+};
 
-            // Function for question 2 (give variables a value)
-            var question2 = function question2() {
-                console.log(question2);
+// Function for countdown
+var countdown = setInterval(function () {
 
-            };
+    timerEl.textContent = countdownTimer;
+    countdownTimer--;
 
-            // Function for question 3
-            var question3 = function question3() {
-                console.log(question3);
+}, 1000);
 
-            };
+// quiztimer function
+var timer = setInterval(function () {
 
-            // Function for question 4
-            var question4 = function question4() {
-                console.log(question4);
-                
-            };
-        };
+    timerEl.textContent = quizTimer;
+    quizTimer--;
+    if (quizTimer <= 0) endGame();
+}, 1000);
 
-        // Function for questions to cycle
-        var quiz4 = function cycle() {
-            console.log(quiz4);
+// Function for timer during quiz; synced to scoring(move outside function?w/eventListener)
+function score(quizTimer) {
 
-            // Function for question 1 (entails boolean with one correct answer and score addition)
-            var question1 = function question1() {
-                console.log(question1);
-
-            };
-
-            // Function for question 2 (give variables a value)
-            var question2 = function question2() {
-                console.log(question2);
-
-            };
-
-            // Function for question 3
-            var question3 = function question3() {
-                console.log(question3);
-
-            };
-
-            // Function for question 4
-            var question4 = function question4() {
-                console.log(question4);
-                
-            };
-        };
+    // Function for storing scores with name input available;
+    var highScore = localStorage.getItem('highscore');
+    if (highScore === null) {
+        highScore = 0;
+    };
 };
 
 
 
+//endCountdown function
+function endCountdown() {
+
+    clearInterval(countdown);
+};
+
+//endgame function
+function endgame() {
+
+    clearInterval(timer);
+};
+
+function storage(event) {
+    event.preventDefault();
+    
+    document.append('ol');
+    document.
+
+};
+
 // addeventlistener(click)
-javaQuiz.addEventListener('click','');
-htmlQuiz.addEventListener('click','');
-cssQuiz.addEventListener('click','');
-randomQuiz.addEventListener('click','');
+// javaQuiz.addEventListener('click', quiz1);
+// htmlQuiz.addEventListener('click', quiz2);
+// cssQuiz.addEventListener('click', quiz3);
+// randomQuiz.addEventListener('click', quiz4);
+highscore.addEventListener('click', storage);
+
+
+
 
 
