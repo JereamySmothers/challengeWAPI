@@ -9,7 +9,7 @@ A website that quizzes an individual on basic coding knowledge.
 * JS
 
 ## Website
-https://lernantino.github.io/challengeWAPI/
+https://JereamySmothers.github.io/challengeWAPI
 
 ## Contribution
 Made with pride by [Jereamy Smothers]
