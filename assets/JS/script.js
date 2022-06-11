@@ -54,10 +54,10 @@ function displayQuestion1() {
 
     question1.textContent = questionArray[index].question;
 
-    button1Choice1.textContent = questionArray[index].choices;
-    button1Choice2.textContent = questionArray[index].choices;
-    button1Choice3.textContent = questionArray[index].choices;
-    button1Choice4.textContent = questionArray[index].choices;
+    // button1Choice1.textContent = questionArray[index].choices;
+    // button1Choice2.textContent = questionArray[index].choices;
+    // button1Choice3.textContent = questionArray[index].choices;
+    // button1Choice4.textContent = questionArray[index].choices;
 
 };
 
@@ -70,87 +70,13 @@ function quizPart1() {
 
 };
 
-function displayQuestion2() {
-    var question2 = document.querySelector('#question2');
-    var button2Choice1 = document.querySelector('#choice2-1');
-    var button2Choice2 = document.querySelector('#choice2-2');
-    var button2Choice3 = document.querySelector('#choice2-3');
-    var button2Choice4 = document.querySelector('#choice2-3');
 
-    question2.textContent = questionArray[index].question;
-
-    button2Choice1.textContent = questionArray[index].choices;
-    button2Choice2.textContent = questionArray[index].choices;
-    button2Choice3.textContent = questionArray[index].choices;
-    button2Choice4.textContent = questionArray[index].choices;
-
-};
-
-function quizPart2() {
-    quizStart.classList.add('hide');
-    questions2.classList.remove('hide');
-    displayQuestion1()
-    timer = setInterval(countdown, 1000);
-
-};
-
-function displayQuestion3() {
-    var question3 = document.querySelector('#question3');
-    var button3Choice1 = document.querySelector('#choice3-1');
-    var button3Choice2 = document.querySelector('#choice3-2');
-    var button3Choice3 = document.querySelector('#choice3-3');
-    var button3Choice4 = document.querySelector('#choice3-3');
-
-    question3.textContent = questionArray[index].question;
-
-    button3Choice1.textContent = questionArray[index].choices;
-    button3Choice2.textContent = questionArray[index].choices;
-    button3Choice3.textContent = questionArray[index].choices;
-    button3Choice4.textContent = questionArray[index].choices;
-
-};
-
-function displayQuestion4() {
-    var question4 = document.querySelector('#question4');
-    var button4Choice1 = document.querySelector('#choice4-1');
-    var button4Choice2 = document.querySelector('#choice4-2');
-    var button4Choice3 = document.querySelector('#choice4-3');
-    var button4Choice4 = document.querySelector('#choice4-3');
-
-    question4.textContent = questionArray[index].question;
-
-    button4Choice1.textContent = questionArray[index].choices;
-    button4Choice2.textContent = questionArray[index].choices;
-    button4Choice3.textContent = questionArray[index].choices;
-    button4Choice4.textContent = questionArray[index].choices;
-
-};
-
-function displayQuestion5() {
-    var question5 = document.querySelector('#question5');
-    var button5Choice1 = document.querySelector('#choice5-1');
-    var button5Choice2 = document.querySelector('#choice5-2');
-    var button5Choice3 = document.querySelector('#choice5-3');
-    var button5Choice4 = document.querySelector('#choice5-3');
-
-    question5.textContent = questionArray[index].question;
-
-    button5Choice1.textContent = questionArray[index].choices;
-    button5Choice2.textContent = questionArray[index].choices;
-    button5Choice3.textContent = questionArray[index].choices;
-    button5Choice4.textContent = questionArray[index].choices;
-
-};
 
 function countdown() {
     timerEl.textContent = quizTimer;
     quizTimer--;
     if (quizTimer <= 0) endGame();
 };
-
-
-
-
 
 // Function for timer during quiz; synced to scoring(move outside function?w/eventListener)
 function score() {
